@@ -49,6 +49,8 @@ def get_args_parser():
     parser.add_argument('--update_freq', default=2, type=int,
                         help='gradient accumulation steps')
 
+    parser.add_argument('--pretrained', action='store_true', help='Use pretrained model')
+
     # Model parameters
     parser.add_argument('--model', default='edgenext_small', type=str, metavar='MODEL',
                         help='Name of model to train')
@@ -303,7 +305,7 @@ def main(args):
 
     model = create_model(
         args.model,
-        pretrained=False,
+        pretrained=args.pretrained,
         num_classes=args.nb_classes,
         drop_path_rate=args.drop_path,
         layer_scale_init_value=args.layer_scale_init_value,
