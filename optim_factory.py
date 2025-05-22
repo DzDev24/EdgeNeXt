@@ -4,7 +4,8 @@ from timm.optim.adafactor import Adafactor
 from timm.optim.adahessian import Adahessian
 from timm.optim.adamp import AdamP
 from timm.optim.lookahead import Lookahead
-from timm.optim.nadam import Nadam
+#from timm.optim.nadam import Nadam
+from timm.optim.nadam import NAdamLegacy as Nadam
 from timm.optim.novograd import NovoGrad
 from timm.optim.nvnovograd import NvNovoGrad
 from timm.optim.radam import RAdam
